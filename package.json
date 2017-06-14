@@ -9,6 +9,7 @@
   "author": "Osvaldo Villagomez",
   "license": "ISC",
   "dependencies": {
+    "lighthouse": "^2.1.0",
     "progress": "^2.0.0",
     "sitemap-generator": "^6.0.0",
     "xml2js": "^0.4.17"
