@@ -5,15 +5,6 @@ const lighthouse        = require('lighthouse');
 const chromeLauncher    = require('lighthouse/chrome-launcher/chrome-launcher');
 const flags = {output: 'json'};
 
-function launchChromeAndRunLighthouse(url, flags, config = null) {
-  return chromeLauncher.launch().then(chrome => {
-    flags.port = chrome.port;
-    return lighthouse(url, flags, config).then(results =>
-      chrome.kill().then(() => results)
-    );
-  });
-}
-
 // Create Site Generator to Obtain all Site URLs
 var generator = new SitemapGenerator('https://www.jimmyjohns.com');
 
@@ -32,6 +23,15 @@ generator.on('done', function (sitemaps) {
     });
   });
 });
+
+function launchChromeAndRunLighthouse(url, flags, config = null) {
+  return chromeLauncher.launch().then(chrome => {
+    flags.port = chrome.port;
+    return lighthouse(url, flags, config).then(results =>
+      chrome.kill().then(() => results)
+    );
+  });
+}
 
 // start the crawler
 generator.start();
