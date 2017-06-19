@@ -1,4 +1,5 @@
 // Load Dependencies
+require('babel-register');
 var validator   = require('validator');
 var path        = require('path');
 
