@@ -11,7 +11,6 @@ if (process.argv[2]) {
   if (validator.isURL(process.argv[2])) {
     console.log("Generating Sitemap...");
     sitemap(process.argv[2], function () {
-      console.log("Generating Audit...");
       chrome();
     });
   } else {
