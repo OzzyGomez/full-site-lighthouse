@@ -7,15 +7,20 @@ var path        = require('path');
 const sitemap   = require('./lib/sitemap.js');
 const chrome    = require('./lib/chrome.js');
 
+// Check if Argument exists and is Valid URL
 if (process.argv[2]) {
   if (validator.isURL(process.argv[2])) {
+    // If true, call sitemap module to generate sitemap
     console.log("Generating Sitemap...");
-    sitemap(process.argv[2], function () {
-      chrome();
+    sitemap(process.argv[2], function (data) {
+      // Once sitemap has been created, Perform Full Site Audit
+      chrome(data);
     });
   } else {
-      console.error(process.argv[2] + " is not a valid URL, please use the full URL.");
+    // Error: Url is not valid
+    console.error(process.argv[2] + " is not a valid URL. Please use the full URL.");
   }
 } else {
+  // Error: Script Usage is incorrect
   console.log("\nUsage: node " + path.basename(__filename) + " [URL]\n");
 }
