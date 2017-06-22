@@ -14,6 +14,8 @@ if (process.argv[2]) {
     console.log("Generating Sitemap...");
     sitemap(process.argv[2], function (data) {
       // Once sitemap has been created, Perform Full Site Audit
+      console.log("Generating Audit...\n");
+      console.log("Depending on the amount of pages you have, this make take a while.\n");
       chrome(data);
     });
   } else {
