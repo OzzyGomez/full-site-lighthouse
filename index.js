@@ -15,7 +15,7 @@ if (process.argv[2]) {
     sitemap(process.argv[2], function (data) {
       // Once sitemap has been created, Perform Full Site Audit
       console.log("Generating Audit...\n");
-      console.log("Depending on the amount of pages you have, this make take a while.\n");
+      console.log("Depending on the amount of pages you have, this may take a while.\n");
       chrome(data);
     });
   } else {
