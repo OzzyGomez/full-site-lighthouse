@@ -13,6 +13,7 @@
     "babel-register": "^6.24.1",
     "chrome-launcher": "^0.1.2",
     "create-html": "^3.0.0",
+    "escape-html": "^1.0.3",
     "lighthouse": "^2.1.0",
     "progress": "^2.0.0",
     "q": "^1.5.0",
