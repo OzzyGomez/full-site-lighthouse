@@ -1,5 +1,6 @@
 // Load Dependencies
 require('babel-register');
+
 var validator   = require('validator');
 var path        = require('path');
 var fs          = require('fs');
@@ -13,7 +14,6 @@ var jsonDate, timeInMs, dir;
 // Check if Argument exists and is Valid URL
 if (process.argv[2]) {
   if (validator.isURL(process.argv[2])) {
-    //jsonDate = (new Date()).toJSON();
     timeInMs = Date.now();
     jsonDate = timeInMs;
     dir = './output/'+jsonDate+'/';
