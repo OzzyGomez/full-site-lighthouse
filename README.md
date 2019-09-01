@@ -4,7 +4,7 @@ The script generates a sitemap of your site and runs Google Lighthouse on each p
 Depending on the number of pages your site contains, running this script asynchronously won't work, since the event listeners will get overloaded.
 
 ## WARNING:
-If your sitemap if long, the script will take a long time to give back a combined evaluation, since each page has to go through the lighthouse auditing system one by one.
+If your sitemap is long, the script will take a long time to give back a combined evaluation, since each page has to go through the lighthouse auditing system one by one.
 
 ## Requirements
 - NodeJS
