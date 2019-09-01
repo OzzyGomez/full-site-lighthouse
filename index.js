@@ -19,7 +19,7 @@ if (process.argv[2]) {
     dir = './output/'+jsonDate+'/';
     // Create Directory
     if (!fs.existsSync(dir)){
-        fs.mkdirSync(dir);
+        fs.mkdirSync(dir, { recursive: true });
     }
     // If true, call sitemap module to generate sitemap
     console.log("Generating Sitemap...\n");
