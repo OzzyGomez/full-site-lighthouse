@@ -9,7 +9,7 @@
   "author": "Osvaldo Villagomez",
   "license": "ISC",
   "dependencies": {
-    "async": "^2.4.1",
+    "async": "^2.6.4",
     "babel-register": "^6.24.1",
     "chrome-launcher": "^0.1.2",
     "create-html": "^3.0.0",
